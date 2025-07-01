@@ -17,12 +17,19 @@ html, body {
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   background: #111;
   color: white;
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 nav .logo {
