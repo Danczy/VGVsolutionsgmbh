@@ -137,21 +137,14 @@ export default function App() {
   const pages = ['home', 'about', 'referenzen', 'leistungen', 'kontakt'];
 
   return (
-    <div className="container">
-      <nav>
-        <div className="logo">VGV Solutions</div>
-        <ul>
-          {t.nav.map((item, i) => (
-            <li key={i}>
-              <button
-                className="nav-button"
-                onClick={() => setPage(pages[i])}
-              >
-                {item}
-              </button>
-            </li>
-          ))}
-        </ul>
+   <div className="logo">
+  <img
+    src="https://www.dropbox.com/scl/fi/m0iqn8m0kilrjhjqf9q0w/WhatsApp-k-p-2025-05-07-09.15.00_baf61e7b.jpg?rlkey=yrgdnjux6iga3mb1j8r2h5qfl&st=1409rsly&raw=1"
+    alt="VGV Solutions logó"
+    className="logo-img"
+  />
+  VGV Solutions GmbH
+
         <div className="lang-switch">
           <button onClick={() => setLang('de')}>DE</button>
           <button onClick={() => setLang('hu')}>HU</button>
