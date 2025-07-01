@@ -35,11 +35,23 @@ nav {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   font-weight: bold;
   font-size: 1.8rem;
   color: #e30613;
   text-transform: uppercase;
   letter-spacing: 1px;
+  gap: 1rem;
+}
+
+.logo-img {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  margin-right: 0.5rem;
 }
 
 nav ul {
