@@ -108,18 +108,13 @@ export default function App() {
       )}
 
       {/* A kontakt szekció CSAK akkor jelenik meg, ha NEM az about oldalon vagy */}
-      {page !== 'about' && (
-        <section>
-          <h2>{t.nav[4]}</h2>
-          <p>{t.contact}</p>
-          <form>
-            <input type="text" placeholder={t.form.name} />
-            <input type="email" placeholder={t.form.email} />
-            <textarea placeholder={t.form.message}></textarea>
-            <button type="submit">{t.form.send}</button>
-          </form>
-        </section>
-      )}
+      {page === 'about' && (
+  <section className="about-section">
+    <h2 className="about-title">{t.nav[1]}</h2>
+    <p className="about-text">{t.about}</p>
+  </section>
+)}
+
 
       <footer>
         <p>© 2025 VGV Solutions GmbH • Geschäftsführer: Víglási Gábor • Kontakt: Conradi Dániel</p>
