@@ -1,9 +1,9 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  font-family: sans-serif;
-  background: #f4f4f4;
-  color: #222;
+body {
+  background-image: url('https://pplx-res.cloudinary.com/image/private/user_uploads/59063116/718b6ee1-e291-4bf0-b166-93b79187e2b7/metal-work-factory.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #222;
 }
 
 .container {
