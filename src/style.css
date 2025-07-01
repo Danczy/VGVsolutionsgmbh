@@ -50,6 +50,7 @@ nav li {
 }
 
 header {
+  width: 100vw; 
   background-image: url('https://images.unsplash.com/photo-1578496479763-b94ddf13fe3d');
   background-size: cover;
   background-position: center;
@@ -62,6 +63,7 @@ header {
   align-items: center;
   text-align: center;
   margin: 0;
+  box-sizing: border-box; 
 }
 
 section {
