@@ -5,11 +5,9 @@ const content = {
   de: {
     nav: ['Startseite', 'Über uns', 'Referenzen', 'Leistungen', 'Kontakt'],
     header: 'Willkommen bei VGV Solutions GmbH',
-    about: 'Mit mehr als 20 Jahren Erfahrung (seit1993) sind wir auf dem Markt in der Branche Arbeitnehmerüberlassung sowohl als Subunternehmer stabil präsent.
-      Während dieses Zeitraums haben wir uns bemüht, kontinuierlich zu innovieren, uns weiterzuentwickeln und sowohl unseren Mitarbeiter suchenden Kooperationspartnern 
-      als auch unseren arbeitssuchenden Kunden stets die aktuellste und professionellste Unterstützung zu bieten, um sicherzustellen, dass Angebot und Nachfrage übereinstimmen. 
-      In einer Form, in der Sie das Gefühl haben, die gesamte Unterstützung und den fachlichen Hintergrund zu erhalten, um den richtigen Mitarbeiter oder nur den idealen Job zu finden.
-      Für Unternehmenkönnen wir dank der kontinuierlichen Weiterentwicklung mit einererheblichenAnzahl vonfachlich kompetenten Kollegen, zuverlässigen, genauenund präzisenMitarbeiternzur Verfügung stellen.',
+    about: `Mit mehr als 20 Jahren Erfahrung (seit 1993) sind wir auf dem Markt in der Branche Arbeitnehmerüberlassung sowohl als Subunternehmer stabil präsent. Während dieses Zeitraums haben wir uns bemüht, kontinuierlich zu innovieren, uns weiterzuentwickeln und sowohl unseren Mitarbeiter suchenden Kooperationspartnern als auch unseren arbeitssuchenden Kunden stets die aktuellste und professionellste Unterstützung zu bieten, um sicherzustellen, dass Angebot und Nachfrage übereinstimmen. In einer Form, in der Sie das Gefühl haben, die gesamte Unterstützung und den fachlichen Hintergrund zu erhalten, um den richtigen Mitarbeiter oder nur den idealen Job zu finden.
+
+Für Unternehmen können wir dank der kontinuierlichen Weiterentwicklung mit einer erheblichen Anzahl von fachlich kompetenten Kollegen, zuverlässigen, genauen und präzisen Mitarbeitern zur Verfügung stellen.`,
     contact: 'Kontaktieren Sie uns über das untenstehende Formular.',
     form: {
       name: 'Ihr Name',
@@ -85,7 +83,7 @@ export default function App() {
       {page === 'about' && (
         <section>
           <h2>{t.nav[1]}</h2>
-          <p>{t.about}</p>
+          <p style={{whiteSpace: 'pre-line'}}>{t.about}</p>
         </section>
       )}
 
@@ -123,4 +121,3 @@ export default function App() {
     </div>
   );
 }
-
