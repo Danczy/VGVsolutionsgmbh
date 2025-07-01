@@ -81,11 +81,17 @@ export default function App() {
       )}
 
       {page === 'about' && (
-        <section>
-          <h2>{t.nav[1]}</h2>
-          <p style={{whiteSpace: 'pre-line'}}>{t.about}</p>
-        </section>
-      )}
+  <section>
+    <h2 style={{ color: "white", textAlign: "center" }}>{t.nav[1]}</h2>
+    <p
+      className="about-text"
+      style={{ whiteSpace: 'pre-line' }}
+    >
+      {t.about}
+    </p>
+  </section>
+)}
+
 
       {page === 'referenzen' && (
         <section>
