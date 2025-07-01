@@ -30,20 +30,11 @@ const content = {
 
 export default function App() {
   const [lang, setLang] = useState('de');
-  const [currentPage, setCurrentPage] = useState('home');
+  const [page, setPage] = useState('home');
   const t = content[lang];
 
-  // Handle navigation clicks
-  const handleNavClick = (index) => {
-    if (index === 1) {
-      // Über uns - open in new tab
-      window.open('https://vg-vsolutionsgmbh.vercel.app/ueber-uns', '_blank', 'noopener,noreferrer');
-    } else {
-      // Set current page for internal navigation
-      const pages = ['home', 'referenzen', 'leistungen', 'kontakt'];
-      setCurrentPage(index < 2 ? pages[index] : pages[index - 1]);
-    }
-  };
+  // Menüponthoz tartozó oldalnevek
+  const pageKeys = ['home', 'about', 'referenzen', 'leistungen', 'kontakt'];
 
   return (
     <div className="container">
@@ -52,22 +43,20 @@ export default function App() {
         <ul>
           {t.nav.map((item, i) => (
             <li key={i}>
-              {i === 1 ? (
-                <a
-                  href="https://vg-vsolutionsgmbh.vercel.app/ueber-uns"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {item}
-                </a>
-              ) : (
-                <button 
-                  className="nav-button"
-                  onClick={() => handleNavClick(i)}
-                >
-                  {item}
-                </button>
-              )}
+              <button
+                className="nav-button"
+                onClick={() => setPage(pageKeys[i])}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: 'inherit',
+                  cursor: 'pointer',
+                  padding: 0,
+                  font: 'inherit'
+                }}
+              >
+                {item}
+              </button>
             </li>
           ))}
         </ul>
@@ -81,13 +70,37 @@ export default function App() {
         <h1>{t.header}</h1>
       </header>
 
-      <section>
-        <h2>{t.nav[1]}</h2>
-        <p>{t.about}</p>
-      </section>
+      {/* Tartalom oldalanként */}
+      {page === 'home' && (
+        <section>
+          <h2>{t.nav[0]}</h2>
+          <p>{t.header}</p>
+        </section>
+      )}
 
-      {/* Conditionally render contact section */}
-      {currentPage !== 'about' && (
+      {page === 'about' && (
+        <section>
+          <h2>{t.nav[1]}</h2>
+          <p>{t.about}</p>
+        </section>
+      )}
+
+      {page === 'referenzen' && (
+        <section>
+          <h2>{t.nav[2]}</h2>
+          <p>Referenciáink / Referenzen tartalom ide jön.</p>
+        </section>
+      )}
+
+      {page === 'leistungen' && (
+        <section>
+          <h2>{t.nav[3]}</h2>
+          <p>Szolgáltatásaink / Leistungen tartalom ide jön.</p>
+        </section>
+      )}
+
+      {/* A kontakt szekció CSAK akkor jelenik meg, ha NEM az about oldalon vagy */}
+      {page !== 'about' && (
         <section>
           <h2>{t.nav[4]}</h2>
           <p>{t.contact}</p>
@@ -106,4 +119,3 @@ export default function App() {
     </div>
   );
 }
-
