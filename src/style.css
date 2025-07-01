@@ -93,6 +93,27 @@ nav ul {
   padding: 3rem 2rem;
 }
 
+/* Főoldali szekció középre igazítása */
+.home-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  width: 100%;
+}
+
+.main-title {
+  color: #e30613;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px #000;
+  width: 100%;
+  margin: 0;
+}
+
+/* Oldalszekciók */
 .page-section {
   min-height: 70vh;
   display: flex;
@@ -226,5 +247,7 @@ footer {
   .section-text, .contact-details pre {
     font-size: 1.1rem;
   }
+  .main-title {
+    font-size: 1.5rem;
+  }
 }
-
