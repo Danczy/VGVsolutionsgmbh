@@ -52,7 +52,6 @@ export default function App() {
       <li key={i}>{item}</li>
     )
   )}
-</ul>
 
         </ul>
         <div className="lang-switch">
