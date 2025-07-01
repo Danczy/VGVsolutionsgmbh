@@ -37,7 +37,23 @@ export default function App() {
       <nav>
         <div className="logo">VGV Solutions</div>
         <ul>
-          {t.nav.map((item, i) => <li key={i}>{item}</li>)}
+  {t.nav.map((item, i) =>
+    i === 1 ? (
+      <li key={i}>
+        <a
+          href="https://vg-vsolutionsgmbh.vercel.app/ueber-uns" 
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {item}
+        </a>
+      </li>
+    ) : (
+      <li key={i}>{item}</li>
+    )
+  )}
+</ul>
+
         </ul>
         <div className="lang-switch">
           <button onClick={() => setLang('de')}>DE</button>
