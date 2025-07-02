@@ -137,14 +137,28 @@ export default function App() {
   const pages = ['home', 'about', 'referenzen', 'leistungen', 'kontakt'];
 
   return (
-  <div className="logo">
-  <img
-    src="/vgv_logo.jpg"
-    alt="VGV Solutions logó"
-    className="logo-img"
-  />
-  VGV Solutions GmbH
-
+    <div className="container">
+      <nav>
+        <div className="logo">
+          <img
+            src="/vgv_logo.jpg"
+            alt="VGV Solutions logó"
+            className="logo-img"
+          />
+          VGV Solutions GmbH
+        </div>
+        <ul>
+          {t.nav.map((item, i) => (
+            <li key={i}>
+              <button
+                className="nav-button"
+                onClick={() => setPage(pages[i])}
+              >
+                {item}
+              </button>
+            </li>
+          ))}
+        </ul>
         <div className="lang-switch">
           <button onClick={() => setLang('de')}>DE</button>
           <button onClick={() => setLang('hu')}>HU</button>
@@ -154,7 +168,7 @@ export default function App() {
       <div className="content">
         {/* Főoldal */}
         {page === 'home' && (
-          <section className="page-section">
+          <section className="page-section home-section">
             <h1 className="main-title">{t.header}</h1>
           </section>
         )}
@@ -219,3 +233,4 @@ export default function App() {
     </div>
   );
 }
+
