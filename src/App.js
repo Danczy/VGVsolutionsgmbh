@@ -137,9 +137,9 @@ export default function App() {
   const pages = ['home', 'about', 'referenzen', 'leistungen', 'kontakt'];
 
   return (
-   <div className="logo">
+  <div className="logo">
   <img
-    src="https://www.dropbox.com/scl/fi/m0iqn8m0kilrjhjqf9q0w/WhatsApp-k-p-2025-05-07-09.15.00_baf61e7b.jpg?rlkey=yrgdnjux6iga3mb1j8r2h5qfl&st=1409rsly&raw=1"
+    src="/vgv logo.jpg"
     alt="VGV Solutions logó"
     className="logo-img"
   />
