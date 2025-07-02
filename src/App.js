@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
 import './style.css';
 
 const content = {
@@ -135,25 +134,6 @@ export default function App() {
   const t = content[lang];
   const pages = ['home', 'about', 'referenzen', 'leistungen', 'kontakt'];
 
-  // EmailJS küldés
-  const handleEmailSend = (e) => {
-    e.preventDefault();
-    emailjs.sendForm(
-      'service_2wml9uo',      // Service ID
-      'template_q634aom',     // Template ID
-      e.target,
-      '-T7DzGWjbj2NkPR-M'     // Public Key
-    ).then(
-      (result) => {
-        alert('Üzenet elküldve!');
-        e.target.reset();
-      },
-      (error) => {
-        alert('Hiba történt: ' + error.text);
-      }
-    );
-  };
-
   return (
     <div className="container">
       <nav>
@@ -233,7 +213,10 @@ export default function App() {
               
               <div className="form-section">
                 <p className="section-text">{t.contact}</p>
-                <form onSubmit={handleEmailSend}>
+                <form
+                  action="https://formspree.io/f/xovwrgep"
+                  method="POST"
+                >
                   <input type="text" name="name" placeholder={t.form.name} required />
                   <input type="email" name="email" placeholder={t.form.email} required />
                   <textarea name="message" placeholder={t.form.message} required></textarea>
@@ -251,6 +234,3 @@ export default function App() {
     </div>
   );
 }
-
-}
-
