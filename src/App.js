@@ -139,7 +139,7 @@ export default function App() {
   return (
   <div className="logo">
   <img
-    src="/vgv logo.jpg"
+    src="/vgv_logo.jpg"
     alt="VGV Solutions logó"
     className="logo-img"
   />
